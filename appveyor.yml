@@ -1,0 +1,14 @@
+version: 1.0.{build}
+environment:
+  matrix:
+  - Ciricke: Connect
+services: mssql2016
+hosts:
+  connect.circle.com: 192.168.1.0
+  www.circle.com: 192.168.1.1
+build:
+  publish_wap: true
+  publish_azure: true
+  publish_nuget: true
+  parallel: true
+  verbosity: minimal
